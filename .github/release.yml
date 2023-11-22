@@ -2,25 +2,25 @@
 
 changelog:
   exclude:
-    - "^chore(release):"
-    - "^docs:"
-    - "^test:"
-    - "^refactor:"
-    - "^build:"
-    - "^ci:"
+    - '^chore(release):'
+    - '^docs:'
+    - '^test:'
+    - '^refactor:'
+    - '^build:'
+    - '^ci:'
   categories:
-    - title: "🚀 Features"
+    - title: '🚀 Features'
       labels:
-        - "feature"
-    - title: "🐛 Bug Fixes"
+        - 'feature'
+    - title: '🐛 Bug Fixes'
       labels:
-        - "fix"
-    - title: "📝 Documentation"
+        - 'fix'
+    - title: '📝 Documentation'
       labels:
-        - "docs"
-    - title: "🔧 Maintenance"
+        - 'docs'
+    - title: '🔧 Maintenance'
       labels:
-        - "chore"
-        - "refactor"
-        - "build"
-        - "ci"
+        - 'chore'
+        - 'refactor'
+        - 'build'
+        - 'ci'

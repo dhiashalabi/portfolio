@@ -6,28 +6,64 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint app --fix && npm run format",
+    "prepare": "husky install",
+    "format": "prettier -w .",
+    "format:check": "prettier -c ."
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "accept-language": "^3.0.18",
+    "flowbite": "^2.2.0",
+    "flowbite-react": "^0.6.4",
     "i18next": "^23.7.6",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-resources-to-backend": "^1.2.0",
-    "next": "14.0.1",
+    "next": "^14.0.3",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-cookie": "^6.1.1",
     "react-dom": "^18",
-    "react-i18next": "^13.4.1"
+    "react-i18next": "^13.4.1",
+    "react-icons": "^4.12.0",
+    "react-query": "^3.39.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.2",
+    "@commitlint/config-conventional": "^18.4.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
     "autoprefixer": "^10.0.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "git-cz": "^4.9.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.1.0",
     "postcss": "^8",
-    "tailwindcss": "^3.3.0",
+    "prettier": "3.1.0",
+    "tailwindcss": "^3.3.5",
     "typescript": "^5"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint",
+      "prettier -w"
+    ],
+    "src/**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
